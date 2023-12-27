@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,700;1,9..40,400;1,9..40,700&family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+  <link href="/dist/output.css" rel="stylesheet">
+  <script src="/script.js"></script>
+  <script src="/snipcard.js"></script>
+</head>
+<body>
+  <nav class="py-2 px-4 bg-black text-white sticky top-0 z-10 flex">
+    <div>
+      <h1 class="text-3xl"><span class="italic">Del</span>valle</h1>
+      <p class="text-slate-400">Agency</p>
+    </div>
+    <div class="ml-auto my-auto">
+      <button class="snipcart-ckeckout flex items-center relative">
+                     (<span class="snipcart-total-price text-sm">$0.00</span>)
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+          class="fill-white hover:stroke-cyan-700 block w-9 h-9">
+          <path stroke-linecap="round" stroke-linejoin="round" 
+            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+        </svg>
+        <span class="snipcart-item-count absolute top-0 right-0 bg-amber-500 block w-4 h-4 text-xs rounded-full leading-5"
+          >0</span>
+      </button>    
+    </div>
+    <div class="pl-4 my-auto">
+      <button class="snipcart-customer-signin">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+            class="hover:stroke-cyan-700 block w-9 h-9">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      </button> 
+    </div>
+  </nav>
+    <header 
+      class="flex bg-[url(/assets/cm.jpeg)] bg-cover h-[calc(100vh-72px)] min-[400px]"
+      >
+      <div class="m-auto text-center">
+        <button
+          id="btn-browse-collection" 
+          class="bg-black text-white uppercase px-6 py-4 cursor-pointer font-bold rounded-md hover:bg-zinc-700 transition-colors"
+          >Collection and feature</button>
+        <h1 class="text-3xl mb-8"><span class="italic">Del</span>valle</h1>
+        <h1
+          class="text-7xl underline text-white">Membership</h1>
+          <p class="text-lg mb-8">Options available that best suits your preferences</p>
+      </div>
+    </header>   
+    <!--Member sections-->
+    <section 
+      id="membership-a" 
+      class="product md:flex max-w-screen-xl mx-auto p-16 items-center gap-5 hover:bg-zinc-300 transition-colors">
+      <div class="md:min-w-[30%] md:max-w-[30%]">
+        <img src="/assets/bg.jpg" alt="Standard-membership"/>
+      </div>
+      <div class="flex-grow  p-8 ">
+        <h2 class="text-7xl">Standard Membership</h2>
+        <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible accommodation for your team</a>
+        <p class="mt-6 text-slate-700">
+          This membership type has a basic charge and provides essential access to a variety
+          of resources and features. This entry level membership option provides access to
+          standard benefits. These may include discounted rate on acomodations, transportation,
+          and tours, as well as limited access to exclusive deals. While the benefits may not
+          be as extensive as higher tier membership, it can be a great starting point
+          for travelers looking to save.
+        </p>
+        <p class="text-red-700 mt-8">$0.99</p><!-- by defoult lables display inline -->
+        <label class="text-sm mt-8 inline-block">Quantity</label>
+          <div class="grid grid-cols-[100px_1fr] gap-8">
+            <input class="quantity border border-black rounded-md text-center px-2" type="number" value="1" min="1"
+            /> 
+            <button
+              data-item-id="mship-standard"
+              data-item-price="0.99"
+              data-item-description="Get access to a variety of resources and essential features, 
+                                      plus regular updates and informative newsletters to stay connected"
+              data-item-image="/assets/bg.jpg"
+              data-item-name="Standard Membership"
+              data-item-url="/" 
+              class="snipcart-add-item bg-black text-white uppercase px-9 py-4 cursor-pointer font-bold rounded-md hover:bg-zinc-700 transition-colors">
+              Add to cart  
+            </button>
+        </div>
+    </section>
+    <!-- //////// -->
+    <section 
+      id="membership-b" 
+      class="product md:flex max-w-screen-xl mx-auto p-16 items-center gap-5 hover:bg-zinc-300 transition-colors">
+      <div class="md:min-w-[30%] md:max-w-[30%]">
+        <img src="/assets/cr.jpg" alt="premium membersip"/></div>
+
+      <div class="flex-grow">
+        <h2 class="text-7xl">Premium Membership</h2>
+        <p class="mt-6 text-slate-700">
+         with this membership, user can enjoy enhanced privilege and more benefits.
+         These may include priority access to premium destinations, additional discounts
+         on travel expenses, exclusive access to member only louncges and amenities,
+         and personalized travel assistence. 
+        </p>
+        <p class="text-red-700 mt-8">$1.99</p>
+        <!-- by defoult lables display inline -->
+        <label class="text-sm mt-8 inline-block">Quantity</label>
+          <div class="grid grid-cols-[100px_1fr] gap-8">
+            <input 
+              class="quantity border border-black rounded-md text-center px-2"
+              type="number" value="1" min="1" />
+            <button
+              data-item-id="mship-premium"
+              data-item-price="1.99"
+              data-item-description="Elevate your experience with a premium membership; 
+                                      enjoy exclusive access to content, articles, or tutorials.
+                                      ulocking premium feature an enhanced funcionality"
+              data-item-image="/assets/cr.jpg"
+              data-item-name="Premium Membership"
+              data-item-url="/" 
+              class="snipcart-add-item bg-black text-white uppercase px-9 py-4 cursor-pointer font-bold rounded-md hover:bg-zinc-700 transition-colors">
+              Add to cart  
+            </button>
+        </div>
+    </section>
+     <!-- ////// -->
+    <section 
+      id="membership-c" 
+      class="product md:flex max-w-screen-xl mx-auto p-16 items-center gap-5 hover:bg-zinc-300 transition-colors">
+      <div class="md:min-w-[30%] md:max-w-[30%]">
+        <img src="/assets/cm.jpeg" alt="vip membersip"/></div>
+
+      <div class="flex-grow">
+        <h2 class="text-7xl">Selected Membership</h2>
+        <p class="mt-7 text-slate-700">
+          This membership offer the higher benefits and exclusivitu to traveler Member can
+          expect access to premium services such as dedicated travel concierge, complimentary
+          updates, exclusive acces to VIP events, and special treatments at partner resorts
+          and establishments. This memberships are ideal for those who wants to personalize
+          attencion, luxury, and unique travel experiences. 
+        </p>
+        <p class="text-red-700 mt-8">$3.99</p>
+        <!-- by defoult lables display inline -->
+        <label class="text-sm mt-8 inline-block">Quantity</label>
+          <div class="grid grid-cols-[100px_1fr] gap-8">
+            <input 
+              class="quantity border border-black rounded-md text-center px-2"
+              type="number" value="1" min="1" />
+            <button
+              data-item-id="mship-Selected"
+              data-item-price="2.99"
+              data-item-url="/"
+              data-item-name="Selected Membership"
+              data-item-image="/assets/cm.jpeg"
+              data-item-description="gaining access to a realm reserved for a select few and extend all the advantage 
+                                      of basic and premium membership"
+              data-item-custom1-name="optional"
+              data-item-custom1-options="Insurence[+59.99]"
+              class="snipcart-add-item bg-black text-white uppercase px-9 py-4 cursor-pointer font-bold rounded-md hover:bg-zinc-700 transition-colors">
+              Add to cart   
+            </button>
+        </div>
+   </section>
+   <footer class="p-20 bg-gradient-to-t from-slate-800">
+    <div class="flex justify-center gap-7">
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+            class="hover:stroke-cyan-700 block w-9 h-9">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6A2.25 2.25 0 016 3.75h1.5m9 0h-9" />
+        </svg></a>
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+            class="hover:stroke-cyan-700 block w-9 h-9">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+        </svg>        
+      </a>
+      <a href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
+            class="hover:stroke-cyan-700 block w-9 h-9">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+        </svg>        
+      </a>
+    </div>
+   </footer>
+</body>
+</html>
